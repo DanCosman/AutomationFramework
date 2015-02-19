@@ -1,0 +1,33 @@
+# Access to the data in this file is provided through EnvConfig - see env_config.rb
+
+defaults: &execution_defaults
+  default_config: ci #This just ensures the ft profile (below) is loaded if no CONFIG= is passed from the command line.
+  dashboard_path: /Account/Login
+  self_assessment_path: /SelfAssessment
+
+
+ci:
+  <<: *execution_defaults
+  base_url: http://sfvm22:82
+  username: cciocan
+  password: Passw0rd.123
+  TeamLead_username: dcrisan
+  TeamLead_password: impersonate
+  DepartmentLead_username: horatiu
+  DepartmentLead_password: impersonate
+
+ft:
+  <<: *execution_defaults
+  base_url:
+
+uat:
+  <<: *execution_defaults
+
+rc:
+  <<: *execution_defaults
+  base_url:
+
+
+
+
+
